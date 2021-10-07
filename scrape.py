@@ -2,12 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import pprint
 import os
-#
+
 res = requests.get('https://news.ycombinator.com/news')
 res2 = requests.get('https://news.ycombinator.com/news?p=2')
 soup = BeautifulSoup(res.text, 'html.parser')
 soup2 = BeautifulSoup(res2.text, 'html.parser')
-
+print('hello')
 links = soup.select('.storylink')
 subtext = soup.select('.subtext')
 links2 = soup2.select('.storylink')
